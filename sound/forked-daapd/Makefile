@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=forked-daapd
-PKG_VERSION:=27.2
+PKG_VERSION:=27.3
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=https://github.com/ejurgensen/$(PKG_NAME)/releases/download/$(PKG_VERSION)/
-PKG_HASH:=27294a893253d232161f4521fc42147e65324ce5a13fcf550b537100375277bb
+PKG_HASH:=69633db326c3c3296f0932adf06a04f97e7ddd1409a0ce2981eb7d3c9ac495d5
 
 PKG_FIXUP:=autoreconf
 PKG_USE_MIPS16:=0
@@ -49,7 +49,6 @@ define Package/forked-daapd/conffiles
 endef
 
 CONFIGURE_ARGS += \
-	--enable-itunes \
 	--enable-lastfm \
 	--enable-mpd \
 	--enable-chromecast \
